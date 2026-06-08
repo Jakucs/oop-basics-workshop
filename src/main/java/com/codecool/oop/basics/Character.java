@@ -12,22 +12,21 @@ public class Character {
     }
 
     public void attack(Character opponent) {
-        System.out.println(this.name + " attacks " + opponent.name + "!");
+        System.out.println(name +  " attacks " + opponent.getName());
         opponent.takeDamage(this.attackPower);
+        System.out.println(name + " new health: " + health);
     }
 
     private void takeDamage(int damage) {
-        this.health -= damage;
-        if (this.health < 0) {
-            this.health = 0;
-        }
+        this.health = this.health - damage;
     }
 
     public void displayStatus() {
-        if (isAlive()) {
-            System.out.println(name + " - Health: " + health);
-        } else {
-            System.out.println(name + " - DEFEATED");
+        System.out.println(name + " " + health);
+        if(isAlive()){
+            System.out.println("Still alive:)");
+        }else{
+            System.out.println("You are dead");
         }
     }
 
