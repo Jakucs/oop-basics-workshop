@@ -26,7 +26,7 @@ public class Character {
         if(isAlive()){
             System.out.println("Still alive:)");
         }else{
-            System.out.println("You are dead");
+            System.out.println(name + " are dead");
         }
     }
 

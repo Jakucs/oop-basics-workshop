@@ -17,7 +17,7 @@ public class Main {
         // Simulate combat rounds
         System.out.println("=== Combat Begins ===");
         int i = 0;
-        while (hero.isAlive() || goblin.isAlive()){
+        while (hero.isAlive() && goblin.isAlive()){
             i++;
             if(i%2==0 && hero.isAlive()){
                 hero.attack(goblin);
